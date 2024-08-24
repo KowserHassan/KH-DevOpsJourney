@@ -14,6 +14,8 @@ Key features of linux:
 
 ## Why Linux?
 
+Linux is widely used in servers, cloud services and networking. These are 5 key features that make Linux a top choice for businesses and developers:
+
 **1. Stability and Reliability:**
 Linux systems are known for their stability and reliability. They can run for years without needing a reboot, which is a critical requirement for servers and continuous operation systems. This stability makes Linux a favourite for servers and systems where uptime is crucial.
 
@@ -38,3 +40,23 @@ Popular examples:
 - Debian
 - Centos
 - Fedora
+
+## Virtualisation
+
+This allows you to run linux on your existing computer without needing to replace your current OS.
+
+Windows users use VirtualBox to do this, whilst Mac users use UTM. UTM allows you to emulate any classic or current OS, even Windows XP!
+
+## UTM
+
+When running a VM on UTM, you have two options: virtualisation or emulation.
+
+- Virtualization is faster because  it directly uses your laptop's hardware and CPU architecture and can therefore only run VMs in the native CPU architecture. This means the guest OS running in the VM must be the same architecture as the host system's CPU (e.g., x86 on an x86 CPU). Virtualisation allows the VM to run nearly at native speed since it doesn't need to translate instructions between different architectures.
+
+- Emulation allows you to run a guest OS with a different CPU architecture than the host (e.g., running an ARM-based OS on an x86 CPU). Emulation involves simulating the hardware and translating instructions, which requires more processing power and separate hardware and software, making it significantly slower than virtualisation.
+
+There are 3 ways to boot the Linux OS:
+
+1. Use Apple Virtualisation
+2. Boot from Kernel image
+3. Boot from ISO image
