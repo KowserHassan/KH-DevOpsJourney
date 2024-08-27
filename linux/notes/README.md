@@ -100,21 +100,82 @@ e.g ls -a.
 - tab - completes the words for you
 - ctrl l - clears screen
 - man ‘enter command’
+- sudo !! - re-runs the last command entered with superuser (root) privileges.
 
 ## Miscellaneous Command Line Knowledge
 - . : hidden files begin with a '.' and are ignored the ls command and can only be viewed using ls -a command
 
 ## Shells
 
-installing zsh
+When a command is typed into the terminal, the shell acts as an intermediary between the user and the operating system. It interprets the commands entered by the user and converts them into actions that the OS can execute.
 
-set zsh as default shell 
+The shell:
+- interprets the command
+- translates it into instructions that the OS can understand known as system calls or function calls (involves understanding the command syntax and any arguments provided)
+- then passes these instructions to the OS
 
-chsh -s /bin/zsh
+The OS processes the instructions and provides an output.
 
+Binary Translation: The shell does not directly convert commands into binary, it translates them into system calls or instructions that the OS understands. The OS and its underlying hardware ultimately process these instructions, often involving binary at the lower level.
 
+Commands can be considered to be small programs. These programs are written in a programming language and then compiled into a format that the computer can execute called a binary.
 
+The program is written by a developer which performs a specific task e.g ls
+A binary is simply a compiled version of programs that the computer can run directly.
 
+When you type a command:
+- the shell interprets it and understands that we want to run the ls programme
+- it then searches for the ls programme in certain directories on the computer which are listed in the path enviornment variable
+- when the shell finds the ls programme, excecutes it
+
+The path environment variable tells the shell which directories we need to look in to excute the command we want to run
+
+i.e. /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin
+
+Common shells:
+- bash
+- zsh
+- ksh
+- fish
+- csh/Tcsh
+These shells have unique capabilities but they all serve teh same fundamental purpose - helping the user interact with the OS
+  
+**Check the shell you are using by running the command: echo $SHELL**
+
+## **Installing zsh**
+**Installation command**
+
+- sudo apt-get install zsh
+
+**Set zsh as default shell permanently**
+
+- chsh -s /bin/zsh
+- there will be a password prompt
+- if there's an authentification failure, run the command - **sudo** chsh -s /bin/zsh
+- reboot instance to update the new defualt shell
+
+.. if that did not work run the command: sudo chsh -s $ (which zsh) $ (whoami)
+
+This is essentially asking it to locate the correct binary for where zsh is located and for the current user (whoami)
+
+- sudo: Runs the command with superuser (root) privileges.
+- chsh: The chsh (change shell) command changes the user's default shell.
+- -s: Specifies the new shell.
+- $(which zsh): Finds the path of the Zsh shell (e.g., /bin/zsh).
+- $(whoami): specifies current user
+
+ **Customise your ZSH**
+ - install OhMyZsh using the command - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+ - powerlevel10k OhMyZsh - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+
+**.zshrc Plugins**
+
+zsh syntax-highlighting:
+- git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+zsh autosuggestions:
+- git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 
 ## How to rent a Virtual Machine from AWS? ☁️
