@@ -92,7 +92,7 @@ e.g ls -a.
 6. touch - creates new file 
 7. rm - removes file
 8. echo - writes text in file i.e echo "Hello World" > file.txt
-9. cat - displays all contents within a file
+9. cat - displays file contents and combines multiple files and shows you the output of them.
 10. grep - searches for words/patterns in file - essentially cmd/ctrl F
 11. vim
 
@@ -103,7 +103,7 @@ e.g ls -a.
 - sudo !! - re-runs the last command entered with superuser (root) privileges.
 
 ## Miscellaneous Command Line Knowledge
-- . : hidden files begin with a '.' and are ignored the ls command and can only be viewed using ls -a command
+- . : hidden files begin with a '.' and are ignored by the ls command and can only be viewed using ls -a command
 
 ## Shells
 
@@ -177,6 +177,54 @@ zsh syntax-highlighting:
 zsh autosuggestions:
 - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+## The Linux File System
+
+In Linux, everything is treated as a file, including devices and processes. This structure provides a flexible way to manage the file system
+It is organsied in a hierarachal structure, starting at the root directory which is denoted by a single /
+
+/ - The root directory of the entire filesystem hierarchy, everything is nested under this directory.
+
+/bin - Essential ready-to-run programs (binaries), includes the most basic commands such as ls and cp.
+
+/boot - Contains kernel boot loader files.
+
+/dev - Device files.
+
+/etc - Core system configuration directory, should hold only configuration files and not any binaries.
+
+/home - Personal directories for users, holds your documents, files, settings, etc.
+
+/lib - Holds library files that binaries can use.
+
+/media - Used as an attachment point for removable media like USB drives.
+
+/mnt - Temporarily mounted filesystems.
+
+/opt - Optional application software packages.
+
+/proc - Information about currently running processes.
+
+/root - The root user's home directory.
+
+/run - Information about the running system since the last boot.
+
+/sbin - Contains essential system binaries, usually can only be ran by root.
+
+/srv - Site-specific data which are served by the system.
+
+/tmp - Storage for temporary files
+
+/usr - This is a misleading name as it suggest that it is for "user" files, similar to a home directory but most often it does not contain user files in the sense of a home folder. This instead stores user installed software and utilities, however that is not to say you can't add personal directories in there. Inside this directory are sub-directories for /usr/bin, /usr/local, etc.
+
+/var - Variable directory, it's used for system logging, user tracking, caches, etc. Basically anything that is subject to change all the time.
+
+## File Permissions
+
+File permissions control who can read, write and execute a file.
+
+- r - read: allows viewing of file content
+- w - write: allow modifying of file content
+- x - execute: allows execution of programme
 
 ## How to rent a Virtual Machine from AWS? ☁️
 
@@ -202,4 +250,5 @@ EC2 is an AWS service that allows you to rent out virtual servers in the cloud.
 5. Connect to instance using public DNS by running the command - ssh -i /path/to/your-key-file.pem ubuntu@ec2-xx-xx-xx-xx.compute-1.amazonaws.com
 
 **Manage Your Instance:**
+
 Use the instance for your tasks but remember to stop or terminate it when done to avoid charges!
