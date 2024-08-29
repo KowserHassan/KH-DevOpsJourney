@@ -5,7 +5,7 @@
 Linux is an open-source operating system originally developed by Linus Torvalds in 1991. 
 It is the backbone of many servers, networks and cloud infrastructures around the world.
 
-Key features of linux:
+Key features of Linux:
 1. Stability
 2. Security 
 3. Customisatibiltiy
@@ -41,25 +41,11 @@ Popular examples:
 - Centos
 - Fedora
 
-## Virtualisation
+**Virtualisation:**
 
 This allows you to run linux on your existing computer without needing to replace your current OS.
 
 Windows users use VirtualBox to do this, whilst Mac users use UTM. UTM allows you to emulate any classic or current OS, even Windows XP!
-
-## UTM
-
-When running a VM on UTM, you have two options: virtualisation or emulation.
-
-- Virtualization is faster because  it directly uses your laptop's hardware and CPU architecture and can therefore only run VMs in the native CPU architecture. This means the guest OS running in the VM must be the same architecture as the host system's CPU (e.g., x86 on an x86 CPU). Virtualisation allows the VM to run nearly at native speed since it doesn't need to translate instructions between different architectures.
-
-- Emulation allows you to run a guest OS with a different CPU architecture than the host (e.g., running an ARM-based OS on an x86 CPU). Emulation involves simulating the hardware and translating instructions, which requires more processing power and separate hardware and software, making it significantly slower than virtualisation.
-
-There are 3 ways to boot the Linux OS:
-
-1. Use Apple Virtualisation
-2. Boot from Kernel image
-3. Boot from ISO image
 
 ## The Anatomy: Commands, Options and Arguments
 
@@ -84,46 +70,85 @@ e.g ls -a.
 
 ## Linux Commands
 
-1. Ls - lists everything in the directory 
-2. pwd - print working directory (shows you where you are)
-3. cd - change directory
-4. mkdir - makes new directory
-5. rmdir - removes directory 
-6. touch - creates new file 
-7. rm - removes file
-8. echo - writes text in file i.e echo "Hello World" > file.txt
-9. cat - displays file contents and combines multiple files and shows you the output of them.
-10. grep - searches for words/patterns in file - essentially cmd/ctrl F
-11. vim
+<table>
+  <tr>
+    <td>
 
-## Shortcuts 
-- tab - completes the words for you
-- ctrl l - clears screen
-- man ‘enter command’
-- sudo !! - re-runs the last command entered with superuser (root) privileges.
+| Command        | Description                                 |   
+|----------------|---------------------------------------------|
+| `ls`           | Lists directory contents                    |
+| `pwd`          | Prints the current working directory        |
+| `cd`           | Changes the current directory               |
+| `mkdir`        | Creates a new directory                     |
+| `rmdir`        | Removes a directory                         |
+| `cp`           | Copies files or directories                 |
+| `touch`        | Creates a new empty file                    |
+| `mv`           | Moves or renames files or directories       |
+| `rm`           | Removes files or directories                |
+| `grep`         | Searches text for words/patterns            |
+| `echo`         | Writes text in file                         |
+| `cat`          | Concatenates and displays file contents     |
+| `vim`          | Opens the Vim text editor to edit files     |
+| `chmod`        | Changes file permissions                    |
+| `chown`        | Changes file owner and group                |
+| `find`         | Searches for files in a directory hierarchy |
+| `tar`          | Archives files                              |
+| `df`           | Reports file system disk space usage        |
+| `du`           | Estimates file space usage                  |
+
+  </td>
+    <td>
+
+| Shortcut            | Description                                                      |
+|---------------------|------------------------------------------------------------------|
+| `Tab`               | Autocompletes file and directory names                           |
+| `Ctrl + L`          | Clears the terminal screen                                       |
+| `Ctrl + C`          | Stops the current command or process                             |
+| `sudo !!`           | Re-runs last command with superuser privileges                   |
+| `!!`                | Re-runs the last command entered                                 |
+| `man <command>`     | Displays manual page for the specified command                   |
+| `Ctrl + Alt + T`    | Opens a new terminal window                                      |
+| `Ctrl + D`          | Logs out of current shell/closes the terminal                    |
+| `Ctrl + Z`          | Suspends current process and puts in background                  |
+| `Ctrl + A`          | Moves the cursor to the beginning of a line                      |
+| `Ctrl + E`          | Moves the cursor to the end of a line                            |
+| `Ctrl + R`          | Searches through command history                                 |
+| `Ctrl + U`          | Deletes the entire line before the cursor                        |
+| `Ctrl + K`          | Deletes the entire line after the cursor                         |
+| `Ctrl + W`          | Deletes the word before the cursor                               |
+| `Ctrl + Shift + C`  | Copies text from the terminal                                    |
+| `Ctrl + Shift + V`  | Pastes text into the terminal                                    |
+|                     |                                                                  |
+|                     |                                                                  |
+|                     |                                                                  |
+|                     |                                                                  |
+|                     |                                                                  |
+
+ </td>
+  </tr>
+</table>
 
 ## Miscellaneous Command Line Knowledge
+
 - . : hidden files begin with a '.' and are ignored by the ls command and can only be viewed using ls -a command
 
-## Shells
-
-When a command is typed into the terminal, the shell acts as an intermediary between the user and the operating system. It interprets the commands entered by the user and converts them into actions that the OS can execute.
+## Shells: The intermediary between the User and the OS
 
 The shell:
 - interprets the command
 - translates it into instructions that the OS can understand known as system calls or function calls (involves understanding the command syntax and any arguments provided)
-- then passes these instructions to the OS
-
-The OS processes the instructions and provides an output.
+- then passes these instructions to the OS (the OS processes the instructions and provides an output)
 
 Binary Translation: The shell does not directly convert commands into binary, it translates them into system calls or instructions that the OS understands. The OS and its underlying hardware ultimately process these instructions, often involving binary at the lower level.
 
+## Programs and Binaries
 Commands can be considered to be small programs. These programs are written in a programming language and then compiled into a format that the computer can execute called a binary.
 
-The program is written by a developer which performs a specific task e.g ls
+The program is written by a developer which performs a specific task e.g 'ls'
 A binary is simply a compiled version of programs that the computer can run directly.
 
-When you type a command:
+## What happens when you type the 'ls' command?
+
 - the shell interprets it and understands that we want to run the ls programme
 - it then searches for the ls programme in certain directories on the computer which are listed in the path enviornment variable
 - when the shell finds the ls programme, excecutes it
@@ -132,13 +157,13 @@ The path environment variable tells the shell which directories we need to look 
 
 i.e. /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin
 
-Common shells:
+## Common shells:
 - bash
 - zsh
 - ksh
 - fish
 - csh/Tcsh
-These shells have unique capabilities but they all serve teh same fundamental purpose - helping the user interact with the OS
+These shells have unique capabilities but they all serve the same fundamental purpose - helping the user interact with the OS
   
 **Check the shell you are using by running the command: echo $SHELL**
 
@@ -156,26 +181,11 @@ These shells have unique capabilities but they all serve teh same fundamental pu
 
 .. if that did not work run the command: sudo chsh -s $ (which zsh) $ (whoami)
 
-This is essentially asking it to locate the correct binary for where zsh is located and for the current user (whoami)
-
 - sudo: Runs the command with superuser (root) privileges.
 - chsh: The chsh (change shell) command changes the user's default shell.
 - -s: Specifies the new shell.
 - $(which zsh): Finds the path of the Zsh shell (e.g., /bin/zsh).
 - $(whoami): specifies current user
-
- **Customise your ZSH**
- - install OhMyZsh using the command - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
- - powerlevel10k OhMyZsh - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-
-**.zshrc Plugins**
-
-zsh syntax-highlighting:
-- git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-zsh autosuggestions:
-- git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 ## The Linux File System
 
