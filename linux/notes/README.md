@@ -139,7 +139,7 @@ The shell:
 - translates it into instructions that the OS can understand known as system calls or function calls (involves understanding the command syntax and any arguments provided)
 - then passes these instructions to the OS (the OS processes the instructions and provides an output)
 
-Binary Translation: The shell does not directly convert commands into binary, it translates them into system calls or instructions that the OS understands. The OS and its underlying hardware ultimately process these instructions, often involving binary at the lower level.
+Binary Translation: The shell does not directly convert commands into binary, it translates them into system calls or instructions that the OS understands. The OS and its underlying hardware ultimately process these instructions, involving binary at the lower level.
 
 ## Programs and Binaries
 Commands can be considered to be small programs. These programs are written in a programming language and then compiled into a format that the computer can execute called a binary.
@@ -192,41 +192,27 @@ These shells have unique capabilities but they all serve the same fundamental pu
 In Linux, everything is treated as a file, including devices and processes. This structure provides a flexible way to manage the file system
 It is organsied in a hierarachal structure, starting at the root directory which is denoted by a single /
 
-/ - The root directory of the entire filesystem hierarchy, everything is nested under this directory.
+| Directory | Description                                                                                                                                              |
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| /         | The root directory of the entire filesystem hierarchy, everything is nested under this directory.                                                        |
+| /bin      | Essential ready-to-run programs (binaries), includes the most basic commands such as `ls` and `cp`.                                                      |
+| /boot     | Contains kernel boot loader files.                                                                                                                       |
+| /dev      | Device files.                                                                                                                                            |
+| /etc      | Core system configuration directory, should hold only configuration files and not any binaries.                                                          |
+| /home     | Personal directories for users, holds your documents, files, settings, etc.                                                                              |
+| /lib      | Holds library files that binaries can use.                                                                                                               |
+| /media    | Used as an attachment point for removable media like USB drives.                                                                                         |
+| /mnt      | Temporarily mounted filesystems.                                                                                                                         |
+| /opt      | Optional application software packages.                                                                                                                  |
+| /proc     | Information about currently running processes.                                                                                                           |
+| /root     | The root user's home directory.                                                                                                                          |
+| /run      | Information about the running system since the last boot.                                                                                                |
+| /sbin     | Contains essential system binaries, usually can only be run by root.                                                                                     |
+| /srv      | Site-specific data which are served by the system.                                                                                                       |
+| /tmp      | Storage for temporary files.                                                                                                                             |
+| /usr      | This is a misleading name as it suggests that it is for "user" files, similar to a home directory but most often it does not contain user files in the sense of a home folder. This instead stores user-installed software and utilities, however, that is not to say you can't add personal directories in there. Inside this directory are sub-directories for `/usr/bin`, `/usr/local`, etc. |
+| /var      | Variable directory, it's used for system logging, user tracking, caches, etc. Basically, anything that is subject to change all the time.                 |
 
-/bin - Essential ready-to-run programs (binaries), includes the most basic commands such as ls and cp.
-
-/boot - Contains kernel boot loader files.
-
-/dev - Device files.
-
-/etc - Core system configuration directory, should hold only configuration files and not any binaries.
-
-/home - Personal directories for users, holds your documents, files, settings, etc.
-
-/lib - Holds library files that binaries can use.
-
-/media - Used as an attachment point for removable media like USB drives.
-
-/mnt - Temporarily mounted filesystems.
-
-/opt - Optional application software packages.
-
-/proc - Information about currently running processes.
-
-/root - The root user's home directory.
-
-/run - Information about the running system since the last boot.
-
-/sbin - Contains essential system binaries, usually can only be ran by root.
-
-/srv - Site-specific data which are served by the system.
-
-/tmp - Storage for temporary files
-
-/usr - This is a misleading name as it suggest that it is for "user" files, similar to a home directory but most often it does not contain user files in the sense of a home folder. This instead stores user installed software and utilities, however that is not to say you can't add personal directories in there. Inside this directory are sub-directories for /usr/bin, /usr/local, etc.
-
-/var - Variable directory, it's used for system logging, user tracking, caches, etc. Basically anything that is subject to change all the time.
 
 ## File Permissions
 
