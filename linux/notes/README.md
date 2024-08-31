@@ -222,6 +222,10 @@ File permissions control who can read, write and execute a file.
 - w - write: allow modifying of file content
 - x - execute: allows execution of programme
 
+There are 2 ways to represent file permissions:
+1. symbolic
+2. numeric 
+
 ## How to rent a Virtual Machine from AWS? ☁️
 
 EC2 is an AWS service that allows you to rent out virtual servers in the cloud.
