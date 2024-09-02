@@ -1,5 +1,24 @@
 # Linux notes
 
+- [Linux notes](#linux-notes)
+  - [What is Linux?](#what-is-linux)
+  - [Why Linux?](#why-linux)
+  - [Linux Distributions](#linux-distributions)
+  - [The Anatomy: Commands, Options and Arguments](#the-anatomy-commands-options-and-arguments)
+  - [Linux Commands](#linux-commands)
+  - [Miscellaneous Command Line Knowledge](#miscellaneous-command-line-knowledge)
+  - [Shells: The intermediary between the User and the OS](#shells-the-intermediary-between-the-user-and-the-os)
+  - [Programs and Binaries](#programs-and-binaries)
+  - [What happens when you type the 'ls' command?](#what-happens-when-you-type-the-ls-command)
+  - [Common shells:](#common-shells)
+  - [**Installing zsh**](#installing-zsh)
+  - [The Linux File System](#the-linux-file-system)
+  - [File Permissions](#file-permissions)
+  - [Data Redirection](#data-redirection)
+  - [Environment Variables](#environment-variables)
+  - [How to rent a Virtual Machine from AWS? ☁️](#how-to-rent-a-virtual-machine-from-aws-️)
+
+
 ## What is Linux?
 
 Linux is an open-source operating system originally developed by Linus Torvalds in 1991. 
@@ -225,6 +244,15 @@ File permissions control who can read, write and execute a file.
 There are 2 ways to represent file permissions:
 1. symbolic
 2. numeric 
+
+## Data Redirection
+
+Standard stream is essential for effectively handling input and output
+
+There are 3 standard streams:
+1. 
+
+## Environment Variables
 
 ## How to rent a Virtual Machine from AWS? ☁️
 
