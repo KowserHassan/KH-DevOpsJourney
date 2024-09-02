@@ -153,9 +153,9 @@ e.g ls -a.
 ## Shells: The intermediary between the User and the OS
 
 The shell:
-- interprets the command
-- translates it into instructions that the OS can understand known as system calls or function calls (involves understanding the command syntax and any arguments provided)
-- then passes these instructions to the OS (the OS processes the instructions and provides an output)
+1. interprets the command
+2. translates it into instructions that the OS can understand known as system calls or function calls (involves understanding the command syntax and any arguments provided)
+3. then passes these instructions to the OS (the OS processes the instructions and provides an output)
 
 Binary Translation: The shell does not directly convert commands into binary, it translates them into system calls or instructions that the OS understands. The OS and its underlying hardware ultimately process these instructions, involving binary at the lower level.
 
@@ -185,7 +185,7 @@ These shells have unique capabilities but they all serve the same fundamental pu
   
 **Check the shell you are using by running the command: echo $SHELL**
 
-## **Installing zsh**
+## Installing zsh
 **Installation command**
 
 - sudo apt-get install zsh
@@ -234,15 +234,66 @@ It is organsied in a hierarachal structure, starting at the root directory which
 
 ## File Permissions
 
-File permissions control who can read, write and execute a file.
+File permissions control who can read, write and execute a file. This is important in order to maintain security and order in your system. Command: ls -l 
 
-- r - read: allows viewing of file content
-- w - write: allow modifying of file content
-- x - execute: allows execution of programme
+There are 3 ways to represent file permissions:
+1. Symbolic (Text)
+2. Numeric (Octal)
+3. Binary
 
-There are 2 ways to represent file permissions:
-1. symbolic
-2. numeric 
+### 1. Symbolic
+
+The format is rwxrwxrwx, where each set of three letters represents the permissions for the owner, group, and others, respectively.
+
+- r - read: allows you to view file content
+- w - write: allows you to modify file content
+- x - execute: allows you to run the file as as programme
+- "-" - No permission
+
+<img width="404" alt="Screenshot 2024-09-02 at 14 29 14" src="https://github.com/user-attachments/assets/307da4a9-7dde-4a43-85f8-afde3e6e2534">
+
+For example:
+
+rwxr-xr-- means:
+- Owner: read, write, and execute (rwx)
+- Group: read and execute (r-x)
+- Others: read only (r--)
+
+### 2. Numeric 
+
+Each permission set (owner, group, others) is calculated by adding up the values:
+
+For example:
+
+- Owner: rwx = 4 (read) + 2 (write) + 1 (execute) = 7
+- Group: r-x = 4 (read) + 0 (no write) + 1 (execute) = 5
+- Other: r-- = 4 (read) + 0 (no write) + 0 (no execute) = 4
+
+The symbolic representation rwxr-xr-- can be represented numerically as 754.
+
+### 3. Binary
+
+Permissions are simply represented as:
+
+1: Permission is granted.
+0: Permission is denied.
+
+For example:
+
+111101100 (rwxr-xr--) means:
+- Owner: 111 (rwx: full permissions)
+- Group: 101 (r-x: read and execute)
+- Other: 100 (r--: read only)
+  
+<img width="997" alt="Screenshot 2024-09-02 at 15 13 09" src="https://github.com/user-attachments/assets/37bce9fe-3088-4e0f-b276-3c66c5135304">
+
+## chmod command
+
+- allows us to change permissions of a file or directory
+
+There are 2 ways to use chmod:
+1. Symbolic
+2. Numeric 
 
 ## Data Redirection
 
