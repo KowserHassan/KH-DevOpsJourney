@@ -1,6 +1,5 @@
 # Linux notes
 
-- [Linux notes](#linux-notes)
   - [What is Linux?](#what-is-linux)
   - [Why Linux?](#why-linux)
   - [Linux Distributions](#linux-distributions)
