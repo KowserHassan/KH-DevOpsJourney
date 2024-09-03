@@ -10,7 +10,7 @@
   - [Programs and Binaries](#programs-and-binaries)
   - [What happens when you type the 'ls' command?](#what-happens-when-you-type-the-ls-command)
   - [Common shells:](#common-shells)
-  - [**Installing zsh**](#installing-zsh)
+  - [Installing zsh](#installing-zsh)
   - [The Linux File System](#the-linux-file-system)
   - [File Permissions](#file-permissions)
   - [Data Redirection](#data-redirection)
@@ -125,22 +125,17 @@ e.g ls -a.
 | `sudo !!`           | Re-runs last command with superuser privileges                   |
 | `!!`                | Re-runs the last command entered                                 |
 | `man <command>`     | Displays manual page for the specified command                   |
+| `Ctrl + R`          | Searches through command history                                 |
+| `!number`           | Executes previous command from command history                   |
 | `Ctrl + Alt + T`    | Opens a new terminal window                                      |
 | `Ctrl + D`          | Logs out of current shell/closes the terminal                    |
 | `Ctrl + Z`          | Suspends current process and puts in background                  |
 | `Ctrl + A`          | Moves the cursor to the beginning of a line                      |
 | `Ctrl + E`          | Moves the cursor to the end of a line                            |
-| `Ctrl + R`          | Searches through command history                                 |
 | `Ctrl + U`          | Deletes the entire line before the cursor                        |
 | `Ctrl + K`          | Deletes the entire line after the cursor                         |
 | `Ctrl + W`          | Deletes the word before the cursor                               |
-| `Ctrl + Shift + C`  | Copies text from the terminal                                    |
-| `Ctrl + Shift + V`  | Pastes text into the terminal                                    |
-|                     |                                                                  |
-|                     |                                                                  |
-|                     |                                                                  |
-|                     |                                                                  |
-|                     |                                                                  |
+
 
  </td>
   </tr>
@@ -271,6 +266,8 @@ For example:
 
 The symbolic representation rwxr-xr-- can be represented numerically as 754.
 
+Convert rw-----w- to Octal Representation:  602
+
 ### 3. Binary
 
 Permissions are simply represented as:
@@ -292,17 +289,23 @@ For example:
 - allows us to change permissions of a file or directory
 
 There are 2 ways to use chmod:
-1. Symbolic
-2. Numeric 
+1. Symbolic - chmod u+x, g+r, o-w 
+2. Numeric - chmod 777 example.txt
 
 ## Data Redirection
 
 Standard stream is essential for effectively handling input and output
 
 There are 3 standard streams:
-1. 
+1. Standard input (keyboard)
+2. Standard output (terminal screen, or redirected to a file)
+3. Standard error (terminal screen, or redirected to a file)
+
+<img width="997" alt="Screenshot 2024-09-04 at 00 20 19" src="https://github.com/user-attachments/assets/beba105b-c3c6-4259-a2f8-7227eaf02cd8">
 
 ## Environment Variables
+
+Variables that are set in the environment and control the behaviour of your system 
 
 ## How to rent a Virtual Machine from AWS? ☁️
 
