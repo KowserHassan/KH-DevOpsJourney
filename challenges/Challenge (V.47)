@@ -1,0 +1,7 @@
+Convert rw-----w- to Octal Representation
+
+- user: rw- (4+2+0) 6
+- group: --- (0+0+0) 0
+- other: -w- (0+2+0) 2
+
+Octal Representation: 602
