@@ -121,7 +121,7 @@ here positional parameters are passed to the script (more flexible)
 - length="$1"
 - width="$1"
 
-## If statements (conditional statements))
+## If statements (conditional statements)
 
 Used to test conditions and execute different commands based on the outcome of those conditions (true or false)
 
