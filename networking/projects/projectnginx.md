@@ -75,9 +75,7 @@ Register a domain with Cloudflare, follow these steps to point your domain to th
 4. Click **Save** to create the A record.
 5. Visit nginx-kowser.com in your web browser 🎉
 
-
----
-
+<img width="1333" alt="Screenshot 2024-09-16 at 22 17 58" src="https://github.com/user-attachments/assets/1d85b90f-3ee1-4b15-8cbc-efebdb8b2d28">
 
 # We've successfully completed the project! 🏆  
 
