@@ -57,5 +57,6 @@
 - **IP address** is a unique identifier for devices in a network, allowing devices to locate and communicate with each other
 
   - There are 2 types: 
-<img width="655" alt="Screenshot 2024-09-17 at 08 28 17" src="https://github.com/user-attachments/assets/c47594e2-955a-475f-b904-aa228f0968de">
+<img width="685" alt="Screenshot 2024-09-17 at 08 28 17" src="https://github.com/user-attachments/assets/c47594e2-955a-475f-b904-aa228f0968de">
+
 
