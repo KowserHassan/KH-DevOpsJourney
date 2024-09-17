@@ -3,8 +3,8 @@
 1. **Create an EC2 instance with nginx hosted on it.**
 2. **Create an A record on Cloudflare:**
    - **Name:** `nginx`
-   - **Value:** Your EC2 IP address
-3. **View the home nginx webpage at `nginx-kowser.com`**
+   - **Value:** EC2 IP address
+3. **View the home nginx webpage at `nginx.kowserhassan.com`**
 
 > **Background:** Nginx is a high-performance, open-source web server and reverse proxy used by many top websites worldwide. The purpose of this task is to set up a web server that you can access through my domain name. 
 
@@ -60,7 +60,13 @@ Once complete, you can find your **public IP address** in the EC2 dashboard.
 
 <img width="568" alt="Screenshot 2024-09-16 at 20 50 09" src="https://github.com/user-attachments/assets/2b326c5a-aac6-4de8-9dfd-7a06e1ad9d0a">
 
-# Part 2:  Create an A record on Cloudflare
+# Part 2: Manage DNS for the domain through AWS Route 53 
+
+1. Go to your AWS Route 53 Console.
+2. Under DNS Management, click Hosted Zones.
+3. Click Create Hosted Zone, then input your domain name and select Public Hosted Zone.
+
+# Part 3:  Create an A record on Cloudflare
 
 Register a domain with Cloudflare, follow these steps to point your domain to the EC2 instance:
 
@@ -68,14 +74,15 @@ Register a domain with Cloudflare, follow these steps to point your domain to th
 2. Click **Add Record**.
 3. Set the following fields:
    - **Type**: A
-   - **Name**: `@` (or your desired subdomain, e.g., `www`)
+   - **Name**: nginx
    - **IPv4 Address**: Enter the **Elastic IP address** of your EC2 instance.
    - **TTL**: Auto (default)
    - **Proxy Status**: Proxied
 4. Click **Save** to create the A record.
-5. Visit nginx-kowser.com in your web browser 🎉
+5. Visit nginx.kowserhassan.com in the web browser 🎉
 
-<img width="1333" alt="Screenshot 2024-09-16 at 22 17 58" src="https://github.com/user-attachments/assets/1d85b90f-3ee1-4b15-8cbc-efebdb8b2d28">
+<img width="1379" alt="Screenshot 2024-09-17 at 01 02 16" src="https://github.com/user-attachments/assets/2399f0c0-97ce-423f-b079-bbb16af602c2">
+
 
 # We've successfully completed the project! 🏆  
 
