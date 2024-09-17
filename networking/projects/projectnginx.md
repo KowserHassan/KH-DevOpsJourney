@@ -75,7 +75,7 @@ Register a domain with Cloudflare, follow these steps to point your domain to th
 1. Log in to **Cloudflare** and navigate to the **DNS** settings for your domain.
 2. Click **Add Record**.
 3. Set the following fields:
-   - **Type**: A
+   - **Type**: A (Routes traffic to an IPv4 address and some AWS resources e.g EC2)
    - **Name**: nginx
    - **IPv4 Address**: Enter the **Elastic IP address** of your EC2 instance.
    - **TTL**: Auto (default)
@@ -84,7 +84,6 @@ Register a domain with Cloudflare, follow these steps to point your domain to th
 5. Visit nginx.kowserhassan.com in the web browser 🎉
 
 <img width="1379" alt="Screenshot 2024-09-17 at 01 02 16" src="https://github.com/user-attachments/assets/2399f0c0-97ce-423f-b079-bbb16af602c2">
-
 
 # We've successfully completed the project! 🏆  
 
