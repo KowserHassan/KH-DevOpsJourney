@@ -62,6 +62,8 @@ Once complete, you can find your **public IP address** in the EC2 dashboard.
 
 # Part 2: Manage DNS for the domain through AWS Route 53 
 
+> **Information:** Route 53 is a Domain Name System (DNS) service provided by AWS. It helps set up DNS records that map your domain name to the IP address of your EC2 instance, so when users type your domain name into their browser, Route 53 directs them to the IP address of your server where your nginx website is hosted.
+
 1. Go to your AWS Route 53 Console.
 2. Under DNS Management, click Hosted Zones.
 3. Click Create Hosted Zone, then input your domain name and select Public Hosted Zone.
