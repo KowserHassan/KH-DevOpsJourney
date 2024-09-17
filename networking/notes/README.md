@@ -31,6 +31,8 @@
 - **Purpose**: Connects multiple LANs and MANs over a large geographical area.
 - **Example**: The internet is the largest WAN.
 
+<img width="655" alt="Screenshot 2024-09-17 at 08 10 28" src="https://github.com/user-attachments/assets/53c5f940-6136-4017-96f1-2ba5231f1d3d">
+
 ---
 
 ### Networking in DevOps
@@ -40,4 +42,20 @@
 3. Management and monitoring infrastructure 
 4. Optimisation - enhances troubleshooting performance and scalability 
 
+---
+
+### Backbone of networks:
+
+| Device    | Function                                                        | Example                                    |
+|-----------|------------------------------------------------------------------|--------------------------------------------|
+| Switch    | Connects multiple devices within a LAN and ensures efficient dataflow between them | Connects phones, printers, and laptops etc    |
+| Router    | Directs messages between networks and connects different networks, ensuring data reaches the correct destination | Connects home network to internet |
+| Firewall  | Monitors and controls incoming and outgoing network traffic, securing network by enforcing rules and blocking unauthorised access | Protects a company network from external threats |
+
+### IP address & MAC address
+
+- **IP address** is a unique identifier for devices in a network, allowing devices to locate and communicate with each other
+
+  - There are 2 types: 
+<img width="655" alt="Screenshot 2024-09-17 at 08 28 17" src="https://github.com/user-attachments/assets/c47594e2-955a-475f-b904-aa228f0968de">
 
