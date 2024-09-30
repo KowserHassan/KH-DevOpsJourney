@@ -355,12 +355,12 @@ Each environment variable is a key-value pair—the key is the name of the varia
 
 - **Key:** The name of the environment variable.
 
-It acts as an identifier, allowing you to reference the variable later.
+  - It acts as an identifier, allowing you to reference the variable later.
 Example: In the environment variable HOME, HOME is the key.
 
 - **Value:** The actual data or information associated with that key.
 
-It provides the content that the variable holds.
+    - It provides the content that the variable holds.
 Example: For the HOME variable, the value might be /home/yourusername, which indicates the path to your home directory.
 
 >- When you set an environment variable, you create a relationship between a key and a value which allows programs and the OS to access specific information using the variable's key.
