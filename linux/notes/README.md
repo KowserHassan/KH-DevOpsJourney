@@ -353,12 +353,12 @@ Variables that are set in the environment and control the behaviour of processes
 
 Each environment variable is a key-value pair—the key is the name of the variable, and the value is the data or information it holds
 
-- Key: The name of the environment variable.
+- **Key:** The name of the environment variable.
 
 It acts as an identifier, allowing you to reference the variable later.
 Example: In the environment variable HOME, HOME is the key.
 
-- Value: The actual data or information associated with that key.
+- **Value:** The actual data or information associated with that key.
 
 It provides the content that the variable holds.
 Example: For the HOME variable, the value might be /home/yourusername, which indicates the path to your home directory.
@@ -367,9 +367,9 @@ Example: For the HOME variable, the value might be /home/yourusername, which ind
 
 ## Common Uses:
 
-1. Configuration: Environment variables store settings and paths that programs and scripts rely on.
-2. Shell customisation: You can customise how the shell behaves or what paths it uses to find executables.
-3. Accessing system information: Environment variables can store system details like the current user, home directory, or shell type.
+1. **Configuration:** Environment variables store settings and paths that programs and scripts rely on.
+2. **Shell customisation:** You can customise how the shell behaves or what paths it uses to find executables.
+3. **Accessing system information:** Environment variables can store system details like the current user, home directory, or shell type.
 
 ## How to View Environment Variables
 
