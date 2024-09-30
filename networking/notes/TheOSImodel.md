@@ -4,12 +4,32 @@
 
 The OSI model is a theoretical model of networking. It's a framework that shows us how a packet/data traverses through a network in seven different layers. 
 
-The OSI Model provides **application independence** by seperating networking functions into layers with specific job (independent of other layers) 
+This communication model provides a framework that simplifies the way devices and apps communciate over a network, ensuring that all devices/apps can understand one another.
+
+## Why do we need a communication model?
+
+1. **Application independence**
+
+- This means that the functions of each layer in the OSI Model operate independently of one another.
+- Therefore, changes or issues in one layer do not directly affect the others.
+- This modular approach allows for flexibility and adaptability in networking.
 
 This means:
+
 - applications (e.g. web browsers, email, or games) can work on top of the network without worrying about how data is physically sent or routed 
 
 This is important because the application only needs to worry about its own job e.g displaying a web page, while others handle tasks like data transport or error checking.
+
+2. **Simplified Network Equipment Management**
+
+- upgrading netwrok equipment can be very difficult if there isn't a standard model, it is much easier if everything speaks the same language
+
+3. Decoupled innovation
+
+- innovations can happen in each layer indepndently, without affecting the entire system
+- layer-specific netwrok improvement leads to faster and more efficient advancements 
+
+## The 7 layers
 
 | **Layer**  | **Description** | **Function** | **Example** |
 |------------|-----------------|--------------|-------------|
@@ -22,13 +42,16 @@ This is important because the application only needs to worry about its own job 
 | **Layer 7 - Application** | Where the user interacts (e.g., web browsers, email applications). | Provides network services directly to end-user applications. | HTTP, HTTPS, FTP, SMTP |
 
 
+
 ### TCP/IP model
+- the backbone of the internet
+- condensed format of the OSI (4Ls)
   - This model is another version that focuses on layers 3/4 & 7.
   - Explains how data is packaged, sent and recieved over a network, from users application down to the physical network connection.
 
-| **Layer**               | **Description**                                                                                 | **Example**                                             |
+| **The 4 Layers**               | **Description**                                                                                 | **Example**                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| **Application Layer**    | Where users interact with applications like web browsers and email clients.                     | Web browsing, sending emails                            |
+| **Application Layer**    | This is where network applications and protocols operate - HTTP, TLS, DNS                     | Web browsing, sending emails                            |
 | **Transport Layer**      | Ensures data is sent reliably (using TCP) or quickly (using UDP), depending on the requirement. | TCP for reliability, UDP for speed                      |
-| **Internet Layer**       | Routes data between networks using IP addresses.                                                | IP addressing, routing                                  |
-| **Network Access Layer** | Manages the physical connection to the network, whether it's via cables, Wi-Fi, or other means. | Ethernet, Wi-Fi                                         |
+| **Internet Layer**       | Responsible for logical addressing and routing data between networks using IP addresses - IP                                           | IP addressing, routing                                  |
+| **Network Access Layer** | Manages the physical connection to the network, whether it's via cables, Wi-Fi, or other means. | Ethernet, Wi-Fi, Wireless, LAN                                      |
