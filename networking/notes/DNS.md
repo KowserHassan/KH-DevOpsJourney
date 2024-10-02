@@ -97,4 +97,30 @@ DNS responses are cached at various levels:
 - **Nameserver Cache**: Intermediate nameservers cache responses to reduce lookup times.
 
 
+## Debugging DNS issues
 
+Two main troubleshooting tools
+
+### 1. nslookup
+
+- gives you the IP address associated with that domain
+
+<img width="655" alt="Screenshot 2024-10-02 at 14 55 01" src="https://github.com/user-attachments/assets/239c559c-d632-4ba5-9de8-83b299b98a38">
+
+#### The Output
+
+<img width="655" alt="Screenshot 2024-10-02 at 16 49 40" src="https://github.com/user-attachments/assets/3b8997e7-34b7-4a97-a189-e5eeff1de07a">
+
+### 2. dig
+
+- more advanced and detailed than nslookup
+- when you want to do DNS queiries
+  
+<img width="531" alt="Screenshot 2024-10-02 at 14 55 21" src="https://github.com/user-attachments/assets/0404433d-1fe4-464f-81f8-31c5c6139353">
+
+#### The Output
+
+<img width="655" alt="Screenshot 2024-10-02 at 16 51 17" src="https://github.com/user-attachments/assets/237c1c7d-1e2a-4dbc-a504-733b4ec20e07">
+<img width="655" alt="Screenshot 2024-10-02 at 16 51 58" src="https://github.com/user-attachments/assets/ed11d80f-7f7f-40e9-958a-92ec0626e35a">
+
+- you can also run `dig +short google.com` or `dig +short ns`
