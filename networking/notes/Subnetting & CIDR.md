@@ -20,8 +20,7 @@ The address 192.168.1.0/24 represents a network in CIDR notation.
 - facilitates communication between your internal  network and the internet
 - <img width="493" alt="Screenshot 2024-10-08 at 16 14 19" src="https://github.com/user-attachments/assets/2ee71036-2e11-4f3b-ae1e-38f1e3f26db0">
 
-
-#### different types of NAT
+#### Different types of NAT
 
 **Static NAT (1:1 NAT):**
 
@@ -34,5 +33,4 @@ Maps private IP addresses to a pool of public IP addresses. It’s dynamic becau
 **PAT (Port Address Translation), or NAT Overload:**
 
 This is the most common and efficient form of NAT and is used by home routers. In this case, many private IP addresses are mapped to a single public IP address, and the router uses port numbers to keep track of the connections. This allows multiple devices to share a single public IP.
-
 
