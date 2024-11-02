@@ -1,0 +1,3 @@
+create new cluster: `kind create cluster --name <cluster-name>`
+delete cluster: `kind delete cluster --name <cluster-name>`
+create pod imperatively: kubectl get pod nginx -o yaml
